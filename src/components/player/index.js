@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import PlayerTray from './tray'
-// import CardBack from '../card-back'
-
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,13 +9,12 @@ const Wrapper = styled.div`
   height: 87px;
 `
 
-// <CardBack style={{ width: 60, height: 87 }} />
-const Player = ({ style }) => {
+const Player = ({ position, style }) => {
   return (
     <Wrapper style={style}>
-      <PlayerTray />
-      <PlayerTray />
-      <PlayerTray last />
+      <PlayerTray position={position} />
+      <PlayerTray position={position} />
+      <PlayerTray position={position} last />
     </Wrapper>
   )
 }

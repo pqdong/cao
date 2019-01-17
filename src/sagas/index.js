@@ -1,11 +1,6 @@
-import { all } from 'redux-saga/effects'
-
-export function* helloSaga() {
-  console.log('Hello Sagas!')
-}
+import { /* put, */ all } from 'redux-saga/effects'
+// import { actions } from '../reducers'
 
 export default function* rootSaga() {
-  yield all([
-    helloSaga(),
-  ])
+  yield all([])
 }

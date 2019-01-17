@@ -4,7 +4,9 @@ import rootReducer from '../reducers'
 import rootSaga from '../sagas'
 
 const sagaMiddleware = createSagaMiddleware()
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+  trace: true
+}) || compose;
 const store = createStore(
   rootReducer,
   composeEnhancers(applyMiddleware(sagaMiddleware))

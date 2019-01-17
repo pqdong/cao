@@ -13,7 +13,6 @@ const Row = styled.div`
   display: flex;
   flex-shrink: 0;
   width: 100%;
-  padding: 30px 170px;
 
   ${props => props.center && css`
       justify-content: center;
@@ -28,14 +27,14 @@ const DeskOfPlayers = () => {
     <Fragment>
       <Desk>
         <Row center>
-          <Player />
+          <Player position={1} />
         </Row>
         <Row spaceBetween>
-          <Player />
-          <Player />
+          <Player position={4} />
+          <Player position={2} />
         </Row>
         <Row center>
-          <Player />
+          <Player position={3} />
         </Row>
       </Desk>
     </Fragment>
